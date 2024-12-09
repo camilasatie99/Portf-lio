@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título do site -->
+    <title>Site Camila Satie Chimura Lopes</title>
+    <!-- Link para o arquivo CSS para estilização -->
+    <link rel="stylesheet" href="styles.css">
+    
+    
+</head>
+<body>
+    <!-- Barra de navegação com links para as seções do site -->
+    <nav>
+        <ul>
+            <li><a href="#sobre-mim">Sobre Mim</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#experiencia-profissional">Experiência Profissional</a></li>
+            <li><a href="#contato">Contato</a></li>           
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Cabeçalho principal com foto -->
+        <header>
+            <img src="minhafoto.jpg" alt="Foto de Camila">
+            <h1>Olá, eu sou Camila!<br>Estudante na área de Tecnologia!</h1>
+            <p>Estou cursando Análise e Desenvolvimento de Sistemas na faculdade Uninter.</p>
+        </header>
+
+        <section id="sobre-mim">
+            <h2>Sobre Mim</h2>
+            <p> Me chamo Camila Satie Chimura Lopes, estudante de Análise e Desenvolvimento de Sistemas,
+                 e estou sempre em busca de aprimorar meus conhecimentos na área. 
+                 Nos meus momentos livres, aproveito para estudar e expandir minhas habilidades, 
+                 pois acredito que o aprendizado contínuo é essencial para o crescimento profissional e
+                  pessoal. Além da minha paixão pela tecnologia, gosto muito de assistir filmes e séries, 
+                  o que me permite relaxar e também aprender sobre diferentes culturas e perspectivas. 
+                  Acredito que estar sempre aberta a novas experiências e conhecimentos é fundamental 
+                  para me tornar uma profissional mais completa e inovadora.</p>
+        </section>
+
+        <section id="formacao">
+            <h2>Formação Educacional</h2>
+            <p>Estou atualmente cursando Técnico em Análise e Desenvolvimento de Sistemas no Centro Universitário Internacional Uninter. Tenho conhecimento intermediário em inglês e já concluí um curso de Informática na Gigabyte Escola Profissionalizante.</p>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfólio</h2>
+            <p>Segue abaixo alguns exemplos de projetos que desenvolvi:</p>
+            <ul>
+                <li><a href="https://github.com/camilasatie99/jogo-do-n-mero-secreto" target="_blank">Projeto Exemplo 1</a></li>
+                <li><a href="https://github.com/camilasatie99/projeto-jogo-2.0/tree/main/jogo%20numero%20secreto%202.0" target="_blank">Projeto Exemplo 2</a></li>
+            </ul>
+        </section>
+
+        <section id="experiencia-profissional">
+            <h2>Experiência Profissional</h2>
+            <p>Iniciei minha trajetória profissional como estagiária na Caixa Econômica Federal e adquiri experiência em atendimento ao cliente em farmácias e lotéricas. Sempre busquei entregar excelência e desenvolver novas habilidades em cada função. Atualmente, trabalho em uma clínica de atendimento multidisciplinar para crianças autistas e faço estágio na Compass UOL, onde me aperfeiçoo na área de tecnologia.</p>
+        </section>
+        <!-- Seção "Contato" com formulário para enviar mensagens -->
+        <section id="contato">
+            <h2>Contato</h2>
+            <form class="formulario">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email">
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        //Seleciona todos os links dentro do menu de navegação 
+        document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        // Esconde todas as seções dentro do conteúdo principal
+        document.querySelectorAll('main section').forEach(section => {
+            section.style.display = 'none';
+        });
+        // Seleciona a seção que corresponde ao link 
+        const target = document.querySelector(this.getAttribute('href'));
+        // Exibe a seção exixtente
+        if (target) target.style.display = 'block';
+    });
+});
+    </script>
+    
+</body>
+</html>
